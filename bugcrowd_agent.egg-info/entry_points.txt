@@ -1,0 +1,2 @@
+[console_scripts]
+bugcrowd-agent = bugcrowd_agent.main:main

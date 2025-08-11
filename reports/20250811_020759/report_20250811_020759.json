@@ -1,0 +1,165 @@
+{
+  "report_id": "20250811_020759",
+  "generated_at": "2025-08-11T02:08:37.897408",
+  "target": "https://example.com",
+  "scope": {
+    "in_scope": {
+      "domains": [
+        "api.example.com",
+        "example.com",
+        "*.test.example.com"
+      ],
+      "urls": [
+        "https://example.com",
+        "https://example.com/login",
+        "https://example.com/api/v1"
+      ],
+      "ips": [
+        "10.0.0.1/32",
+        "192.168.1.0/24"
+      ]
+    },
+    "out_of_scope": {
+      "domains": [
+        "legacy.example.com",
+        "admin.example.com"
+      ],
+      "urls": [
+        "https://example.com/admin",
+        "https://example.com/internal"
+      ],
+      "ips": [
+        "192.168.1.100/32",
+        "192.168.1.101/32"
+      ]
+    }
+  },
+  "rules": {
+    "allowed_test_types": [
+      "passive_reconnaissance",
+      "active_reconnaissance",
+      "vulnerability_scanning",
+      "manual_testing",
+      "authentication_testing",
+      "authorization_testing",
+      "input_validation_testing",
+      "business_logic_testing"
+    ],
+    "prohibited_test_types": [
+      "denial_of_service",
+      "physical_security",
+      "social_engineering",
+      "destructive_testing",
+      "automated_scanning_without_rate_limiting"
+    ],
+    "rate_limits": {
+      "requests_per_second": 10,
+      "max_concurrent_connections": 5,
+      "max_daily_requests": 10000
+    },
+    "time_restrictions": {
+      "allowed_hours": "24/7",
+      "maintenance_windows": []
+    },
+    "reporting_requirements": {
+      "required_fields": [
+        "title",
+        "description",
+        "steps_to_reproduce",
+        "impact",
+        "affected_assets"
+      ],
+      "recommended_fields": [
+        "severity",
+        "proof_of_concept",
+        "suggested_remediation"
+      ]
+    },
+    "special_instructions": [
+      "Do not access, modify, or exfiltrate personal data",
+      "Do not attempt to pivot to other systems",
+      "Do not exploit vulnerabilities beyond proof of concept",
+      "Report all findings through the Bugcrowd platform",
+      "Do not disclose vulnerabilities to third parties"
+    ]
+  },
+  "findings": [
+    {
+      "title": "Missing Security Headers on example.com",
+      "description": "The server is missing important security headers that help protect against common web vulnerabilities.",
+      "severity": "Low",
+      "type": "passive_reconnaissance",
+      "module": "passive_recon",
+      "module_version": "0.1.0",
+      "affected_url": "https://example.com",
+      "technical_details": "Strict-Transport-Security: Missing HSTS header\nContent-Security-Policy: Missing Content Security Policy\nX-Content-Type-Options: Missing X-Content-Type-Options header\nX-Frame-Options: Missing X-Frame-Options header\nX-XSS-Protection: Missing X-XSS-Protection header",
+      "impact": "Missing security headers may increase the risk of various attacks such as clickjacking, XSS, and MIME-type confusion.",
+      "remediation": "Configure the web server to include the missing security headers in HTTP responses.",
+      "references": [
+        "https://owasp.org/www-project-secure-headers/",
+        "https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html"
+      ],
+      "cwe": "CWE-693"
+    },
+    {
+      "title": "Missing Security Headers on example.com",
+      "description": "The server is missing important security headers that help protect against common web vulnerabilities.",
+      "severity": "Low",
+      "type": "passive_reconnaissance",
+      "module": "passive_recon",
+      "module_version": "0.1.0",
+      "affected_url": "https://example.com",
+      "technical_details": "Strict-Transport-Security: Missing HSTS header\nContent-Security-Policy: Missing Content Security Policy\nX-Content-Type-Options: Missing X-Content-Type-Options header\nX-Frame-Options: Missing X-Frame-Options header\nX-XSS-Protection: Missing X-XSS-Protection header",
+      "impact": "Missing security headers may increase the risk of various attacks such as clickjacking, XSS, and MIME-type confusion.",
+      "remediation": "Configure the web server to include the missing security headers in HTTP responses.",
+      "references": [
+        "https://owasp.org/www-project-secure-headers/",
+        "https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html"
+      ],
+      "cwe": "CWE-693"
+    },
+    {
+      "title": "Missing Security Headers on example.com",
+      "description": "The server is missing important security headers that help protect against common web vulnerabilities.",
+      "severity": "Low",
+      "type": "passive_reconnaissance",
+      "module": "passive_recon",
+      "module_version": "0.1.0",
+      "affected_url": "https://example.com/api/v1",
+      "technical_details": "Strict-Transport-Security: Missing HSTS header\nContent-Security-Policy: Missing Content Security Policy\nX-Content-Type-Options: Missing X-Content-Type-Options header\nX-Frame-Options: Missing X-Frame-Options header\nX-XSS-Protection: Missing X-XSS-Protection header",
+      "impact": "Missing security headers may increase the risk of various attacks such as clickjacking, XSS, and MIME-type confusion.",
+      "remediation": "Configure the web server to include the missing security headers in HTTP responses.",
+      "references": [
+        "https://owasp.org/www-project-secure-headers/",
+        "https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html"
+      ],
+      "cwe": "CWE-693"
+    },
+    {
+      "title": "Information Disclosure in HTTP Headers on example.com",
+      "description": "The server is disclosing potentially sensitive information through HTTP headers.",
+      "severity": "Low",
+      "type": "passive_reconnaissance",
+      "module": "passive_recon",
+      "module_version": "0.1.0",
+      "affected_url": "https://example.com/api/v1",
+      "technical_details": "Server: AkamaiNetStorage",
+      "impact": "Disclosing software versions and technologies may help attackers identify specific vulnerabilities to target.",
+      "remediation": "Configure the web server to remove or obfuscate the sensitive headers.",
+      "references": [
+        "https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/01-Information_Gathering/02-Fingerprint_Web_Server"
+      ],
+      "cwe": "CWE-200"
+    }
+  ],
+  "summary": {
+    "total_findings": 4,
+    "severity_counts": {
+      "Critical": 0,
+      "High": 0,
+      "Medium": 0,
+      "Low": 4,
+      "Info": 0
+    }
+  }
+}

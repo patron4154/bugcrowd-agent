@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Security Report - 20250811_020759</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 20px; color: #333; }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
+        h2 { color: #2c3e50; border-bottom: 1px solid #ddd; padding-bottom: 5px; margin-top: 30px; }
+        h3 { color: #2c3e50; }
+        h4 { color: #2c3e50; }
+        .finding { border: 1px solid #ddd; padding: 15px; margin-bottom: 20px; border-radius: 5px; }
+        .critical { border-left: 5px solid #e74c3c; }
+        .high { border-left: 5px solid #e67e22; }
+        .medium { border-left: 5px solid #f1c40f; }
+        .low { border-left: 5px solid #3498db; }
+        .info { border-left: 5px solid #95a5a6; }
+        .metadata { color: #7f8c8d; font-size: 0.9em; margin-bottom: 10px; }
+        pre { background-color: #f8f9fa; padding: 10px; border-radius: 5px; overflow-x: auto; }
+        .summary-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+        .summary-table th, .summary-table td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        .summary-table th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+<h1>Security Testing Report</h1>
+<div class='metadata'>
+<p><strong>Report ID:</strong> 20250811_020759</p>
+<p><strong>Generated:</strong> 2025-08-11 02:08:37</p>
+<p><strong>Target:</strong> https://example.com</p>
+</div>
+<h2>Executive Summary</h2>
+<p>This report contains 4 security findings:</p>
+<table class='summary-table'>
+<tr><th>Severity</th><th>Count</th></tr>
+<tr><td>Critical</td><td>0</td></tr>
+<tr><td>High</td><td>0</td></tr>
+<tr><td>Medium</td><td>0</td></tr>
+<tr><td>Low</td><td>4</td></tr>
+<tr><td>Info</td><td>0</td></tr>
+</table>
+<h2>Scope</h2>
+<p>The security testing was performed on the following targets:</p>
+<h3>Domains</h3>
+<ul>
+<li>api.example.com</li>
+<li>example.com</li>
+<li>*.test.example.com</li>
+</ul>
+<h3>URLs</h3>
+<ul>
+<li>https://example.com</li>
+<li>https://example.com/login</li>
+<li>https://example.com/api/v1</li>
+</ul>
+<h3>IP Ranges</h3>
+<ul>
+<li>10.0.0.1/32</li>
+<li>192.168.1.0/24</li>
+</ul>
+<h2>Testing Methodology</h2>
+<p>The security testing was performed using the Bugcrowd Agent, an advanced AI-powered security testing tool. 
+The testing included automated scanning, manual testing, and AI-assisted vulnerability analysis.</p>
+<h2>Findings</h2>
+<h3>Low Severity Findings</h3>
+<div class='finding low'>
+<h4>1. Missing Security Headers on example.com</h4>
+<p><strong>Description:</strong></p>
+<p>The server is missing important security headers that help protect against common web vulnerabilities.</p>
+<p><strong>Affected URL:</strong> https://example.com</p>
+<p><strong>Technical Details:</strong></p>
+<pre>
+Strict-Transport-Security: Missing HSTS header
+Content-Security-Policy: Missing Content Security Policy
+X-Content-Type-Options: Missing X-Content-Type-Options header
+X-Frame-Options: Missing X-Frame-Options header
+X-XSS-Protection: Missing X-XSS-Protection header
+</pre>
+<p><strong>Impact:</strong></p>
+<p>Missing security headers may increase the risk of various attacks such as clickjacking, XSS, and MIME-type confusion.</p>
+<p><strong>Remediation:</strong></p>
+<p>Configure the web server to include the missing security headers in HTTP responses.</p>
+<p><strong>References:</strong></p>
+<ul>
+<li>https://owasp.org/www-project-secure-headers/</li>
+<li>https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html</li>
+</ul>
+</div>
+<div class='finding low'>
+<h4>2. Missing Security Headers on example.com</h4>
+<p><strong>Description:</strong></p>
+<p>The server is missing important security headers that help protect against common web vulnerabilities.</p>
+<p><strong>Affected URL:</strong> https://example.com</p>
+<p><strong>Technical Details:</strong></p>
+<pre>
+Strict-Transport-Security: Missing HSTS header
+Content-Security-Policy: Missing Content Security Policy
+X-Content-Type-Options: Missing X-Content-Type-Options header
+X-Frame-Options: Missing X-Frame-Options header
+X-XSS-Protection: Missing X-XSS-Protection header
+</pre>
+<p><strong>Impact:</strong></p>
+<p>Missing security headers may increase the risk of various attacks such as clickjacking, XSS, and MIME-type confusion.</p>
+<p><strong>Remediation:</strong></p>
+<p>Configure the web server to include the missing security headers in HTTP responses.</p>
+<p><strong>References:</strong></p>
+<ul>
+<li>https://owasp.org/www-project-secure-headers/</li>
+<li>https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html</li>
+</ul>
+</div>
+<div class='finding low'>
+<h4>3. Missing Security Headers on example.com</h4>
+<p><strong>Description:</strong></p>
+<p>The server is missing important security headers that help protect against common web vulnerabilities.</p>
+<p><strong>Affected URL:</strong> https://example.com/api/v1</p>
+<p><strong>Technical Details:</strong></p>
+<pre>
+Strict-Transport-Security: Missing HSTS header
+Content-Security-Policy: Missing Content Security Policy
+X-Content-Type-Options: Missing X-Content-Type-Options header
+X-Frame-Options: Missing X-Frame-Options header
+X-XSS-Protection: Missing X-XSS-Protection header
+</pre>
+<p><strong>Impact:</strong></p>
+<p>Missing security headers may increase the risk of various attacks such as clickjacking, XSS, and MIME-type confusion.</p>
+<p><strong>Remediation:</strong></p>
+<p>Configure the web server to include the missing security headers in HTTP responses.</p>
+<p><strong>References:</strong></p>
+<ul>
+<li>https://owasp.org/www-project-secure-headers/</li>
+<li>https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html</li>
+</ul>
+</div>
+<div class='finding low'>
+<h4>4. Information Disclosure in HTTP Headers on example.com</h4>
+<p><strong>Description:</strong></p>
+<p>The server is disclosing potentially sensitive information through HTTP headers.</p>
+<p><strong>Affected URL:</strong> https://example.com/api/v1</p>
+<p><strong>Technical Details:</strong></p>
+<pre>
+Server: AkamaiNetStorage
+</pre>
+<p><strong>Impact:</strong></p>
+<p>Disclosing software versions and technologies may help attackers identify specific vulnerabilities to target.</p>
+<p><strong>Remediation:</strong></p>
+<p>Configure the web server to remove or obfuscate the sensitive headers.</p>
+<p><strong>References:</strong></p>
+<ul>
+<li>https://owasp.org/www-project-web-security-testing-guide/latest/4-Web_Application_Security_Testing/01-Information_Gathering/02-Fingerprint_Web_Server</li>
+</ul>
+</div>
+</body>
+</html>
